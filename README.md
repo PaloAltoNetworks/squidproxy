@@ -1,5 +1,5 @@
-# squidproxy
-This repository is for squid proxy code patches and how to make squid proxy work with decryption broker feature to send traffic to an ICAP server for inspection.
+# Squid Proxy patch to run tproxy preserve the 5 tuple of client traffic
+By default squid proxy changes the source port number for client traffic while configured to handle connections in tproxy mode. This patch will make squid not change the source port number so that it can work with the decryption broker feature. This readme also has pointers to configure squid proxy as ICAP client to a DLP (in this case clamav via c-icap and squidclamav plugin for c-icap). 
 
 More information about how to configure Decryption Broker Feature can be found here at https://docs.paloaltonetworks.com/pan-os/8-1/pan-os-admin/decryption/decryption-broker
 
@@ -223,5 +223,4 @@ echo 'net/netfilter/xt_TPROXY.c:186 +p' > dynamic-debug/control
 
 send some traffic and check debugs with command "sudo dmesg"
 
-
-
+_/* Feel free to provide me feedback to improve this documentation via opening an issue. */_
