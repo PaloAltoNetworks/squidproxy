@@ -12,13 +12,13 @@ libcap devel rpm
 
 Here is how to install these on centos and ubuntu:
 
-## CentOS:
+### CentOS:
 
 yum groupinstall "Development Tools"
 
 yum install libcap-devel
 
-## Ubuntu:
+### Ubuntu:
 
 sudo apt-get update
 
