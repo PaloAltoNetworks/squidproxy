@@ -1,0 +1,20 @@
+--- a/src/FwdState.cc
++++ b/src/FwdState.cc
+@@ -907,7 +907,7 @@ FwdState::connectStart()
+     // We will try to open a new connection, possibly to the same destination.
+     // We reset serverDestinations[0] in case we are using it again because
+     // ConnOpener modifies its destination argument.
+-    serverDestinations[0]->local.port(0);
++    //serverDestinations[0]->local.port(0);
+     serverConn = NULL;
+
+ #if URL_CHECKSUM_DEBUG
+@@ -1271,7 +1271,7 @@ getOutgoingAddress(HttpRequest * request, Comm::ConnectionPointer conn)
+             else
+ #endif
+                 conn->local = request->client_addr;
+-            conn->local.port(0); // let OS pick the source port to prevent address clashes
++            //conn->local.port(0); // let OS pick the source port to prevent address clashes
+             // some flags need setting on the socket to use this address
+             conn->flags |= COMM_DOBIND;
+             conn->flags |= COMM_TRANSPARENT;
