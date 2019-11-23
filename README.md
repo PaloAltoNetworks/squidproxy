@@ -73,8 +73,6 @@ https://wiki.squid-cache.org/Features/Tproxy4
 
 Here is a script which can be run at the bootup time to configure the tproxy settings: (Note: Some of these settings can be added to linux config files to make them permanent)
 
-#cat squid_init.sh
-
 ### Routing for outgoing traffic 
 
 #this can go to /etc/rc.local
