@@ -1,5 +1,5 @@
 # Squid Proxy patch to run tproxy preserve the 5 tuple of client traffic
-By default squid proxy changes the source port number for client traffic while configured to handle connections in tproxy mode. This patch will make squid not change the source port number so that it can work with the decryption broker feature. This readme also has pointers to configure squid proxy as ICAP client to a DLP (in this case clamav via c-icap and squidclamav plugin for c-icap). 
+By default squid proxy changes the source port number of the client traffic while handling connections in tproxy mode. This patch will make squid to not change the source port number so that uses the same five tuple as incoming connection and it can work with the decryption broker feature of Palo Alto Networks Firewalls. This readme also has pointers to configure squid proxy as ICAP client and talk to to a DLP for content scanning. (in this case clamav via c-icap and squidclamav plugin for c-icap). 
 
 More information about how to configure Decryption Broker Feature can be found here at https://docs.paloaltonetworks.com/pan-os/8-1/pan-os-admin/decryption/decryption-broker
 
